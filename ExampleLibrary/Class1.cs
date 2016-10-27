@@ -11,7 +11,7 @@ namespace ExampleLibrary
         //bare et eksempel for at test at NUnit virker. Slettes senere.
         public override string ToString()
         {
-            return "jeg er en klasse";
+            return "jeg er en klasse og dette er en test";
         }
     }
 }

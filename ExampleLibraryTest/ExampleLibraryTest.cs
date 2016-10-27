@@ -17,7 +17,7 @@ namespace Test
         public void TestNUnitWorks()
         {
             ExampleLibrary.Class1 ellib = new ExampleLibrary.Class1();
-            Assert.AreEqual("jeg er en klasse", ellib.ToString());
+            Assert.AreEqual("jeg er en klasse og dette er en test", ellib.ToString());
         }
 
     }
