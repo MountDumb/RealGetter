@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-//using ExampleLibrary;
+
 
 namespace Test
 {
+    //bare for at teste at NUnit virker. Slettes senere
     [TestFixture]
     public class ExampleLibraryTest
         
