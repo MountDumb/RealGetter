@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "ExampleLibraryTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter.Students", "RealGetter.Students\RealGetter.Students.csproj", "{214A79E6-8F8C-45A2-8B2C-6AC35CA94745}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter.Interfaces", "RealGetter.Interfaces\RealGetter.Interfaces.csproj", "{4DF9DC1C-4AB8-4C32-9D66-941843A2707C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{214A79E6-8F8C-45A2-8B2C-6AC35CA94745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{214A79E6-8F8C-45A2-8B2C-6AC35CA94745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{214A79E6-8F8C-45A2-8B2C-6AC35CA94745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF9DC1C-4AB8-4C32-9D66-941843A2707C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF9DC1C-4AB8-4C32-9D66-941843A2707C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF9DC1C-4AB8-4C32-9D66-941843A2707C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF9DC1C-4AB8-4C32-9D66-941843A2707C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

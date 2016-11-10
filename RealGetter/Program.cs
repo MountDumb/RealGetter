@@ -3,40 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RealGetter.Students;
+using RealGetter.Interfaces;
 
 namespace RealGetter
+
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Thingies thing = new Thingies();
-            Console.WriteLine(thing.i);
-            Console.WriteLine(thing.s);
-            thing.DoStuff();
-            Thingy th = new Thingy();
-            Console.WriteLine(th.i);
-            Console.ReadLine();    
-        }
-    }
-
-    public class Thingy
-    {
-        public int i;
-        public Thingy()
-        {
-            i = 0;
-        }
-
-        public void DoStuff()
-        {
-            Console.WriteLine("arglebargle");
+            IPerson testPerson = new Student(0, "Hugh", "Mungus", "66666666", "HughForPresident@much.love");
+            Console.WriteLine(testPerson.StudentId);
+            Console.WriteLine(testPerson.FirstName);
+            Console.WriteLine(testPerson.LastName);
+            Console.WriteLine(testPerson.PhoneNumber);
+            Console.WriteLine(testPerson.EMail);
+            Console.ReadLine();
         }
 
     }
 
-    public class Thingies : Thingy
-    {
-        public string s = "erggdgdgdg";
-    }
+   
 }
