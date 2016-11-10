@@ -13,7 +13,7 @@ namespace RealGetter
     {
         static void Main(string[] args)
         {
-            IPerson testPerson = new Student(0, "Hugh", "Mungus", "66666666", "HughForPresident@much.love");
+            IPerson testPerson = new Student(0, "Hugh", "Mungus", "66666666", "Kitty@cat.dog");
             Console.WriteLine(testPerson.StudentId);
             Console.WriteLine(testPerson.FirstName);
             Console.WriteLine(testPerson.LastName);

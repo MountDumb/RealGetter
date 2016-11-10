@@ -84,7 +84,6 @@ namespace RealGetter.Students
         {
             //Validates that that the EMail String is a single word 
             //and that it contains a '@' followed by a '.' 
-            //Needs cleaning up (three possible exceptions thrown). 
             char[] validationarray = eMailString.ToCharArray();
 
             if (!validationarray.Contains(';') && !validationarray.Contains(' '))
@@ -98,25 +97,13 @@ namespace RealGetter.Students
                             if (validationarray[ii] == '.')
                             {
                                 _eMail = eMailString;
-                            }
-                            else
-                            {
-                                throw new Exception("Invalid Email address");
+                                return; 
                             }
                         }
                     }
-                    else
-                    {
-                        throw new Exception("Invalid Email address");
-                    }
-
                 }
             }
-            else
-            {
                 throw new Exception("Invalid Email address");
-            }
-
         }
 
         public override string ToString()
