@@ -84,6 +84,7 @@ namespace RealGetter.Students
         {
             //Validates that that the EMail String is a single word 
             //and that it contains a '@' followed by a '.' 
+            //Maybe this should be refactored into a static validation class?
             char[] validationarray = eMailString.ToCharArray();
 
             if (!validationarray.Contains(';') && !validationarray.Contains(' '))
