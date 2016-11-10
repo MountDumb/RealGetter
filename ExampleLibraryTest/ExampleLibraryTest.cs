@@ -10,14 +10,14 @@ namespace Test
 {
     //bare for at teste at NUnit virker. Slettes senere
     [TestFixture]
-    public class ExampleLibraryTest
+    class ExampleLibraryTest
         
     {
         [Test]
         public void TestNUnitWorks()
         {
-            ExampleLibrary.Class1 ellib = new ExampleLibrary.Class1();
-            Assert.AreEqual("jeg er en klasse og dette er en test", ellib.ToString());
+            //ExampleLibrary.Class1 ellib = new ExampleLibrary.Class1();
+            //Assert.AreEqual("jeg er en klasse og dette er en test", ellib.ToString());
         }
 
     }

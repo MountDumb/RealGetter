@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter", "RealGetter\RealGetter.csproj", "{54FF4BCE-6960-4E6C-B813-4D067A313544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleLibrary", "ExampleLibrary\ExampleLibrary.csproj", "{B888A9D1-7504-4F9D-9A45-031D581F6896}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "ExampleLibraryTest\Tests.csproj", "{DD960C7C-2ED4-437F-9A25-AF086698C526}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{54FF4BCE-6960-4E6C-B813-4D067A313544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54FF4BCE-6960-4E6C-B813-4D067A313544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54FF4BCE-6960-4E6C-B813-4D067A313544}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B888A9D1-7504-4F9D-9A45-031D581F6896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B888A9D1-7504-4F9D-9A45-031D581F6896}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B888A9D1-7504-4F9D-9A45-031D581F6896}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B888A9D1-7504-4F9D-9A45-031D581F6896}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD960C7C-2ED4-437F-9A25-AF086698C526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD960C7C-2ED4-437F-9A25-AF086698C526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD960C7C-2ED4-437F-9A25-AF086698C526}.Release|Any CPU.ActiveCfg = Release|Any CPU
