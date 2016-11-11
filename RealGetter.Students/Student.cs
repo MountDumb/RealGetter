@@ -19,8 +19,7 @@ namespace RealGetter.Students
         #endregion
 
         #region Properties
-        //Properties
-
+        
         public int StudentId
         {
             get { return _studentId; }
