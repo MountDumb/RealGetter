@@ -55,10 +55,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RealGetter.Interfaces\RealGetter.Interfaces.csproj">
-      <Project>{4df9dc1c-4ab8-4c32-9d66-941843a2707c}</Project>
-      <Name>RealGetter.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RealGetter.Students\RealGetter.Students.csproj">
       <Project>{214a79e6-8f8c-45a2-8b2c-6ac35ca94745}</Project>
       <Name>RealGetter.Students</Name>

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RealGetter.Interfaces;
+//using RealGetter.Interfaces;
 
 namespace RealGetter.Students
 {
-    public class Student : IPerson
+    public class Student : IPerson, IStudent
     {
         #region Fields
         private int _studentId;

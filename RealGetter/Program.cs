@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RealGetter.Students;
-using RealGetter.Interfaces;
+//using RealGetter.Interfaces;
 
 namespace RealGetter
 
@@ -14,7 +14,7 @@ namespace RealGetter
         static void Main(string[] args)
         {
             IPerson testPerson = new Student(0, "Hugh", "Mungus", "66666666", "Kitty@cat.dog");
-            Console.WriteLine(testPerson.StudentId);
+            Console.WriteLine(((IStudent)testPerson).StudentId);
             Console.WriteLine(testPerson.FirstName);
             Console.WriteLine(testPerson.LastName);
             Console.WriteLine(testPerson.PhoneNumber);
