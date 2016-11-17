@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealGetter.Students
+namespace RealGetter.Persons
 {
     public interface IStudent
     {
-        int StudentId { get; }
-        void SetStudentId(int studId);
+        int StudentId { get; set; }
+       
     }
 }
