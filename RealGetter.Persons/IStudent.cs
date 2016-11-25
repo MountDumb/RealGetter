@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealGetter.Persons
+namespace RealGetter.Lib
 {
     public interface IStudent
     {

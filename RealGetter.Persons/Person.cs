@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealGetter.Persons
+namespace RealGetter.Lib
 {
-    public abstract class Person : IPerson
+    public abstract class Person
     {
         //public int StudentId { get; set; }
         public string FirstName { get; set; }

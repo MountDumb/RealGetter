@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter", "RealGetter\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "ExampleLibraryTest\Tests.csproj", "{DD960C7C-2ED4-437F-9A25-AF086698C526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter.Persons", "RealGetter.Persons\RealGetter.Persons.csproj", "{626D4236-D547-4F8D-AAFA-0D561D161293}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealGetter.Lib", "RealGetter.Persons\RealGetter.Lib.csproj", "{626D4236-D547-4F8D-AAFA-0D561D161293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

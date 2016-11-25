@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RealGetter.Persons\RealGetter.Persons.csproj">
+    <ProjectReference Include="..\RealGetter.Persons\RealGetter.Lib.csproj">
       <Project>{626d4236-d547-4f8d-aafa-0d561d161293}</Project>
-      <Name>RealGetter.Persons</Name>
+      <Name>RealGetter.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
