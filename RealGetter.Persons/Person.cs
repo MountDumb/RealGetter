@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RealGetter.Lib
 {
-    public abstract class Person
+    public abstract class Person : IPerson
     {
         //public int StudentId { get; set; }
         public string FirstName { get; set; }
