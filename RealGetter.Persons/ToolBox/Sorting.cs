@@ -37,18 +37,26 @@ namespace RealGetter.Lib
         public void Randomizer<T>(IList<T> t) 
         {
             IList<T> input = new List<T>(t);
-            IList<T> temp = new List<T>();
+            IList<T> output = new List<T>();
             Random rand = new Random();
-            int tempint;
+            int seed;
+
+            //for (int i = input.Count; i > 0; i--)
+            //{
+            //    seed = rand.Next(input.Count);
+            //    output.Add(input[seed]);
+            //    input.RemoveAt(seed);
+            //}
+
 
             while (input.Count > 0)
             {
-                tempint = rand.Next(input.Count);
-                temp.Add(input[tempint]);
-                input.RemoveAt(tempint);
+                seed = rand.Next(input.Count);
+                output.Add(input[seed]);
+                input.RemoveAt(seed);
             }
 
-            t = temp;
+            t = output;
             
         }
     }
