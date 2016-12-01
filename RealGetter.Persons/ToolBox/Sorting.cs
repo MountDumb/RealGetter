@@ -41,11 +41,13 @@ namespace RealGetter.Lib
             Random rand = new Random();
             int seed;
 
-            //for (int i = input.Count; i > 0; i--)
+            //int counter = input.Count;
+            //for (int i = counter; i > 0; i--)
             //{
             //    seed = rand.Next(input.Count);
             //    output.Add(input[seed]);
             //    input.RemoveAt(seed);
+            //    counter--;
             //}
 
 
