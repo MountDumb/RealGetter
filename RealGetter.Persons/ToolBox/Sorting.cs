@@ -59,14 +59,14 @@ namespace RealGetter.Lib
         {
             IList<T> input = new List<T>(t);
             IList<T> output = new List<T>();
-            int seed;
+            int currentIndex;
 
             //int counter = input.Count;
             //for (int i = counter; i > 0; i--)
             //{
-            //    seed = new Random().Next(counter);
-            //    output.Add(input[seed]);
-            //    input.RemoveAt(seed);
+            //    currentIndex = new Random().Next(counter);
+            //    output.Add(input[currentIndex]);
+            //    input.RemoveAt(currentIndex);
             //    counter--;
             //    t = output;
             //}
@@ -74,9 +74,9 @@ namespace RealGetter.Lib
 
             while (input.Count > 0)
             {
-                seed = new Random().Next(input.Count);
-                output.Add(input[seed]);
-                input.RemoveAt(seed);
+                currentIndex = new Random().Next(input.Count);
+                output.Add(input[currentIndex]);
+                input.RemoveAt(currentIndex);
             }
 
             t = output;
