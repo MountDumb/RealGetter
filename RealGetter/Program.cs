@@ -38,7 +38,7 @@ namespace RealGetter
             Console.WriteLine(lint[3]);
             Console.ReadLine();
 
-            sort.Grouper(lint, 0);
+            sort.Grouper(lint, 2);
 
             Console.WriteLine(lint[0].GroupNumber);
             Console.WriteLine(lint[1].GroupNumber);

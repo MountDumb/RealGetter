@@ -35,11 +35,12 @@ namespace RealGetter.Lib
         }
 
         public void Randomizer<T>(IList<T> t) 
-            {
+        {
             IList<T> input = new List<T>(t);
             IList<T> temp = new List<T>();
             Random rand = new Random();
             int tempint;
+
             while (input.Count > 0)
             {
                 tempint = rand.Next(input.Count);
