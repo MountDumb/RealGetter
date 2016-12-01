@@ -15,7 +15,7 @@ namespace RealGetter.Lib
         }
         public void Grouper<T>(List<T> t, uint ii) where T : IGroupNumber
         {
-            if (ii < 1) throw new Exception("There must be at least one group");
+            if (ii < 1) throw new IndexOutOfRangeException("There must be at least one group");
             int currentGroupNumber = 1;
             int groupCounter = 0;
             
