@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using RealGetter.Interfaces;
+using RealGetter.Lib.Interfaces;
 
 namespace RealGetter.Lib
 {
-    public class Student : Person, IStudent
+    public class Student : Person, IStudent, IGroupNumber
     {
         #region Fields
         //private int _studentId;
@@ -20,6 +20,8 @@ namespace RealGetter.Lib
         {
             get; set;
         }
+
+        public int GroupNumber { get; set; }
 
         //public string FirstName
         //{
@@ -43,6 +45,10 @@ namespace RealGetter.Lib
         #endregion
 
         #region Constructors
+            public Student()
+        {
+
+        }
         public Student(int studentId, string firstName, string lastName, string phoneNumber, string eMail)
         {
             this.StudentId = studentId;
