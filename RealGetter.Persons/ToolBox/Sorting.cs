@@ -13,15 +13,15 @@ namespace RealGetter.Lib
         {
 
         }
-        public void Grouper<T>(List<T> t, uint ii) where T : IGroupNumber
+        public void Grouper<T>(List<T> t, uint groupSize) where T : IGroupNumber
         {
-            if (ii < 1) throw new IndexOutOfRangeException("There must be at least one group");
+            if (groupSize < 1) throw new IndexOutOfRangeException("There must be at least one group");
             int currentGroupNumber = 1;
             int groupCounter = 0;
             
             for (int i = 0; i < t.Count; i++)
             {
-                if (groupCounter >= ii)
+                if (groupCounter >= groupSize)
                 {
                     currentGroupNumber += 1;
                     groupCounter = 0;
