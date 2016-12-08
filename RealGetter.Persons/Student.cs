@@ -49,13 +49,15 @@ namespace RealGetter.Lib
         {
 
         }
-        public Student(int studentId, string firstName, string lastName, string phoneNumber, string eMail)
+        public Student(int studentId, string firstName, string lastName, string gender, string ssn /*,string phoneNumber, string eMail*/)
         {
             this.StudentId = studentId;
             this.FirstName = firstName;
             this.LastName = lastName;
-            this.PhoneNumber = phoneNumber;
-            this.EMail = eMail;
+            this.Gender = gender;
+            this.SSN = ssn;
+            //this.PhoneNumber = phoneNumber;
+            //this.EMail = eMail;
         }
         #endregion
 
@@ -65,7 +67,7 @@ namespace RealGetter.Lib
 
         public override string ToString()
         {
-            return base.ToString();
+            return this.FirstName;
         }
 
         public override bool Equals(object obj)

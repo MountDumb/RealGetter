@@ -22,20 +22,23 @@ namespace RealGetter
             //Console.ReadLine();
 
             Sorting sort = new Sorting();
-            List<Student> lint = new List<Student>();
-            lint.Add(new Student());
-            lint.Add(new Student());
-            lint.Add(new Student());
-            lint.Add(new Student());
-            lint.Add(new Student());
-            lint.Add(new Student());
-            lint.Add(new Student());
+            IList<Student> lint = new List<Student>();
+            lint.Add(new Student(1, "Casper", "", "", ""));
+            lint.Add(new Student(1, "Mikkel", "", "", ""));
+            lint.Add(new Student(1, "Peter", "", "", ""));
+            lint.Add(new Student(1, "Torben", "", "", ""));
+            lint.Add(new Student(1, "Christian", "", "", ""));
+            lint.Add(new Student(1, "Delle", "", "", ""));
+            lint.Add(new Student(1, "Bølle", "", "", ""));
 
-            sort.Randomizer(lint);
-            Console.WriteLine(lint[0]);
-            Console.WriteLine(lint[1]);
-            Console.WriteLine(lint[2]);
-            Console.WriteLine(lint[3]);
+            lint = sort.Randomizer(lint);
+            Console.WriteLine(lint[0].ToString());
+            Console.WriteLine(lint[1].ToString());
+            Console.WriteLine(lint[2].ToString());
+            Console.WriteLine(lint[3].ToString());
+            Console.WriteLine(lint[4].ToString());
+            Console.WriteLine(lint[5].ToString());
+            Console.WriteLine(lint[6].ToString());
             Console.ReadLine();
 
             sort.Grouper(lint, 2);

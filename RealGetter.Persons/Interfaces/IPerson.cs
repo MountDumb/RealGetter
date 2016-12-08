@@ -11,8 +11,10 @@ namespace RealGetter.Lib.Interfaces
         //int StudentId { get; }
         string FirstName { get; set; }
         string LastName { get; set; }
-        string PhoneNumber { get; set; }
-        string EMail { get; set; }
+        string Gender { get; set; }
+        string SSN { get; set; }
+        //string PhoneNumber { get; set; }
+        //string EMail { get; set; }
 
    
 
