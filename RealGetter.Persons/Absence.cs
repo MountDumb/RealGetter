@@ -43,6 +43,11 @@ namespace RealGetter.Lib
             comment = "";
             
         }
+
+        public void DoStuff()
+        {
+            Console.WriteLine(levelOfActivity.ToString());
+        }
     }
     
 }

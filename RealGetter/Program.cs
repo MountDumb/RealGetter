@@ -51,6 +51,10 @@ namespace RealGetter
             Console.WriteLine(lint[5].GroupNumber);
             Console.WriteLine(lint[6].GroupNumber);
 
+            Absence abs = new Absence();
+
+            abs.DoStuff();
+
             Console.ReadLine();
 
 
