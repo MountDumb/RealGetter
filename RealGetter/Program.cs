@@ -28,10 +28,10 @@ namespace RealGetter
                     SqlCommand cmd1 = new SqlCommand("spInsertStudent", con);
                     cmd1.CommandType = CommandType.StoredProcedure;
                     cmd1.Parameters.Add("@StudentFirstName", SqlDbType.NVarChar);
-                    cmd1.Parameters["@StudentFirstName"].Value = "Perdy";
-                    cmd1.Parameters.Add(new SqlParameter("@StudentLastName", "Cat"));
+                    cmd1.Parameters["@StudentFirstName"].Value = "Lucas";
+                    cmd1.Parameters.Add(new SqlParameter("@StudentLastName", "Graham"));
                     cmd1.Parameters.Add(new SqlParameter("@ClassID", 1));
-                    cmd1.Parameters.Add(new SqlParameter("@StudentPersonNr", 2305924575));
+                    cmd1.Parameters.Add(new SqlParameter("@StudentPersNr", 05924575));
 
                     cmd1.ExecuteNonQuery();
                     //con.Open();
