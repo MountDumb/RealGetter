@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RealGetter.Lib;
+using System.Data;
+using System.Data.SqlClient;
 //using RealGetter.Interfaces;
 
 namespace RealGetter
@@ -11,8 +13,45 @@ namespace RealGetter
 {
     class Program
     {
+        //private static string connectionString = "Server=ealdb1.eal.local; Database=ejl23_db; User=ejl23_usr; Password=Baz1nga23;";
+        private static string connectionString = "Server=ealdb1.eal.local; Database=ejl09_db; User=ejl09_usr; Password=Baz1nga9;";
+
         static void Main(string[] args)
         {
+
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd1 = new SqlCommand("spInsertStudent", con);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    cmd1.Parameters.Add("@StudentFirstName", SqlDbType.NVarChar);
+                    cmd1.Parameters["@StudentFirstName"].Value = "Perdy";
+                    cmd1.Parameters.Add(new SqlParameter("@StudentLastName", "Cat"));
+                    cmd1.Parameters.Add(new SqlParameter("@ClassID", 1));
+                    cmd1.Parameters.Add(new SqlParameter("@StudentPersonNr", 2305924575));
+
+                    cmd1.ExecuteNonQuery();
+                    //con.Open();
+                    //SqlCommand cmd1 = new SqlCommand("InsertPet", con);
+                    //cmd1.CommandType = CommandType.StoredProcedure;
+                    //cmd1.Parameters.Add("@Petname", SqlDbType.NVarChar);
+                    //cmd1.Parameters["@PetName"].Value = "Kalle";
+                    //cmd1.Parameters.Add(new SqlParameter("@PetType", "Kalle"));
+                    //cmd1.Parameters.Add(new SqlParameter("@PetBreed", "Kalle"));
+                    //cmd1.Parameters.Add(new SqlParameter("@PetDOB", DateTime.Now));
+                    //cmd1.Parameters.Add(new SqlParameter("@PetWeight", 2.54m));
+
+                    //cmd1.ExecuteNonQuery();
+
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine("Ooops, you got the following errormessage: " + e.Message);
+                }
+            }
             //IPerson testPerson = new Student(0, "Hugh", "Mungus", "66666666", "Kitty@cat.dog");
             //Console.WriteLine(((IStudent)testPerson).StudentId);
             //Console.WriteLine(testPerson.FirstName);
