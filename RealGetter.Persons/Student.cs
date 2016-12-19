@@ -54,7 +54,7 @@ namespace RealGetter.Lib
             this.StudentId = studentId;
             this.FirstName = firstName;
             this.LastName = lastName;
-            this.Gender = gender;
+            //this.Gender = gender;
             this.SSN = ssn;
             //this.PhoneNumber = phoneNumber;
             //this.EMail = eMail;

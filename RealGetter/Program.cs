@@ -31,7 +31,7 @@ namespace RealGetter
                     cmd1.Parameters["@StudentFirstName"].Value = "Lucas";
                     cmd1.Parameters.Add(new SqlParameter("@StudentLastName", "Graham"));
                     cmd1.Parameters.Add(new SqlParameter("@ClassID", 1));
-                    cmd1.Parameters.Add(new SqlParameter("@StudentPersNr", 05924575));
+                    cmd1.Parameters.Add(new SqlParameter("@StudentPersNr", "0905924575"));
 
                     cmd1.ExecuteNonQuery();
                     //con.Open();
