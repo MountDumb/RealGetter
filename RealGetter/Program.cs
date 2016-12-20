@@ -34,6 +34,17 @@ namespace RealGetter
                     cmd1.Parameters.Add(new SqlParameter("@StudentPersNr", "0905924575"));
 
                     cmd1.ExecuteNonQuery();
+
+                    //Sorting sort = new Sorting();
+                    //IList<Student> lint = new List<Student>();
+                    //lint.Add(new Student(1, "Casper", "", "", ""));
+                    //lint.Add(new Student(1, "Mikkel", "", "", ""));
+                    //lint.Add(new Student(1, "Peter", "", "", ""));
+                    //lint.Add(new Student(1, "Torben", "", "", ""));
+                    //lint.Add(new Student(1, "Christian", "", "", ""));
+                    //lint.Add(new Student(1, "Delle", "", "", ""));
+                    //lint.Add(new Student(1, "Bølle", "", "", ""));
+
                     //con.Open();
                     //SqlCommand cmd1 = new SqlCommand("InsertPet", con);
                     //cmd1.CommandType = CommandType.StoredProcedure;

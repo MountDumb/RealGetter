@@ -6,26 +6,31 @@ using System.Threading.Tasks;
 
 namespace RealGetter.Lib
 {
-    class StudentRepo
+    public static class StudentRepo
     {
-        private List<Student> students;
-
-        public StudentRepo()
+        public static string ClassDesignation
         {
-            students = new List<Student>();
+            get; set;
         }
 
-        public List<Student> GetStudents()
+        private static List<Student> students;
+
+        //public StudentRepo()
+        //{
+        //    students = new List<Student>();
+        //}
+
+        public static List<Student> GetStudents()
         {
             return students;
         }
 
-        public void AddNewStudent(Student student)
+        public static void AddNewStudent(Student student)
         {
             students.Add(student);
         }
 
-        public void RemoveStudent(Student student)
+        public static void RemoveStudent(Student student)
         {
             for (int i = 0; i < students.Count; i++)
             {
@@ -37,7 +42,7 @@ namespace RealGetter.Lib
             }
         }
 
-        public void UpdateStudent(Student student)
+        public static void UpdateStudent(Student student)
         {
             for (int i = 0; i < students.Count; i++)
             {

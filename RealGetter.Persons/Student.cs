@@ -21,6 +21,8 @@ namespace RealGetter.Lib
             get; set;
         }
 
+        
+
         public int GroupNumber { get; set; }
 
         //public string FirstName
