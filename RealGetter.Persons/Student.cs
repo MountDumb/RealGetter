@@ -10,11 +10,18 @@ namespace RealGetter.Lib
     public class Student : Person, IStudent, IGroupNumber
     {
         #region Fields
-        //private int _studentId;
+        private int _studentId;
+        private IStudentInfo _currentStudentInfo;
 
+        
         #endregion
 
         #region Properties
+
+        public IStudentInfo CurrentStudentInfo
+        {
+            get { return _currentStudentInfo; }
+        }
 
         public int StudentId
         {
@@ -25,25 +32,7 @@ namespace RealGetter.Lib
 
         public int GroupNumber { get; set; }
 
-        //public string FirstName
-        //{
-        //    get; 
-        //}
-
-        //public string LastName
-        //{
-        //    get;
-        //}
-
-        //public string PhoneNumber
-        //{
-        //    get;
-        //}
-
-        //public string EMail
-        //{
-        //    get;
-        //}
+     
         #endregion
 
         #region Constructors
@@ -51,15 +40,13 @@ namespace RealGetter.Lib
         {
 
         }
-        public Student(int studentId, string firstName, string lastName, string gender, string ssn /*,string phoneNumber, string eMail*/)
+        public Student(int studentId, string firstName, string lastName, string gender, string ssn)
         {
             this.StudentId = studentId;
             this.FirstName = firstName;
             this.LastName = lastName;
-            //this.Gender = gender;
             this.SSN = ssn;
-            //this.PhoneNumber = phoneNumber;
-            //this.EMail = eMail;
+          
         }
         #endregion
 

@@ -29,25 +29,6 @@ namespace RealGetter.Lib
         MedHigh,
         High
     }
-    public class Absence
-    {
-        TypeOfAbsence typeOfAbsence;
-        LevelOfActivity levelOfActivity;
-        string comment;
-        
-
-        public Absence()
-        {
-            typeOfAbsence = TypeOfAbsence.None;
-            levelOfActivity = LevelOfActivity.NotSet;
-            comment = "";
-            
-        }
-
-        public void DoStuff()
-        {
-            Console.WriteLine(levelOfActivity.ToString());
-        }
-    }
+   
     
 }

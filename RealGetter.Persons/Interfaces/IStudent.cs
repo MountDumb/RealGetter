@@ -9,6 +9,9 @@ namespace RealGetter.Lib.Interfaces
     public interface IStudent
     {
         int StudentId { get; set; }
-       
+
+        IStudentInfo CurrentStudentInfo { get; }
+
+
     }
 }
