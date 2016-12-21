@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.cs" />
     <Compile Include="Interfaces\IGroupNumber.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Interfaces\IStudent.cs" />
@@ -49,7 +50,7 @@
     <Compile Include="Student.cs" />
     <Compile Include="StudentInfo.cs" />
     <Compile Include="StudentRepo.cs" />
-    <Compile Include="AbsenceAndActivity.cs" />
+    <Compile Include="Absence.cs" />
     <Compile Include="ToolBox\Sorting.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

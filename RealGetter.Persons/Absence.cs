@@ -8,27 +8,22 @@ namespace RealGetter.Lib
 {
     public enum TypeOfAbsence
     {
-        Illness,
+        
         LeaveExtraordinary,
-        AbsenceIllegal,
-        IllnessCaution,
         Late,
-        LeftEarly,
-        LateAndLeftEarly,
         ChristmasSealHome,
+        IllegalAbsenceCaution,
+        None,
         Internship,
-        None
+        Illness,
+        LateAndLeftEarly,
+        IllegalAbsence,
+        IllnessCaution,
+        
+          
     }
 
-    public enum LevelOfActivity
-    {
-        NotSet,
-        Low,
-        LowMed,
-        Medium,
-        MedHigh,
-        High
-    }
+
    
     
 }
