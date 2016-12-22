@@ -3,34 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RealGetter.Lib.Interfaces;
 
 namespace RealGetter.Lib
 {
-    public static class StudentRepo
+    public class StudentRepo : IStudentRepo
     {
-        public static string ClassDesignation
+        public string ClassDesignation
         {
             get; set;
         }
 
-        private static List<Student> students;
+        private List<IStudent> students;
 
-        //public StudentRepo()
-        //{
-        //    students = new List<Student>();
-        //}
+        public StudentRepo()
+        {
+            students = new List<IStudent>();
+        }
 
-        public static List<Student> GetStudents()
+        public  List<IStudent> GetStudents()
         {
             return students;
         }
 
-        public static void AddNewStudent(Student student)
+        public void AddNewStudent(IStudent student)
         {
             students.Add(student);
         }
 
-        public static void RemoveStudent(Student student)
+        public void RemoveStudent(IStudent student)
         {
             for (int i = 0; i < students.Count; i++)
             {
@@ -42,7 +43,7 @@ namespace RealGetter.Lib
             }
         }
 
-        public static void UpdateStudent(Student student)
+        public void UpdateStudent(IStudent student)
         {
             for (int i = 0; i < students.Count; i++)
             {
