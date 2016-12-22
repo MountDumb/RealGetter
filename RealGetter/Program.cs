@@ -27,7 +27,8 @@ namespace RealGetter
                 Console.WriteLine(((IPerson)item).LastName);
             }
 
-           
+            Console.ReadLine();
+
 
 
             //Sorting sort = new Sorting();
@@ -60,9 +61,9 @@ namespace RealGetter
             //Console.WriteLine(lint[5].GroupNumber);
             //Console.WriteLine(lint[6].GroupNumber);
 
-            
 
-            Console.ReadLine();
+
+
 
             //Sorting sort = new Sorting();
             //IList<Student> lint = new List<Student>();
