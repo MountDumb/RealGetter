@@ -73,13 +73,13 @@ namespace RealGetter
 
             Sorting sort = new Sorting();
             IList<Student> lint = new List<Student>();
-            lint.Add(new Student(1, "Casper", "", "", ""));
-            lint.Add(new Student(1, "Mikkel", "", "", ""));
-            lint.Add(new Student(1, "Peter", "", "", ""));
-            lint.Add(new Student(1, "Torben", "", "", ""));
-            lint.Add(new Student(1, "Christian", "", "", ""));
-            lint.Add(new Student(1, "Delle", "", "", ""));
-            lint.Add(new Student(1, "Bølle", "", "", ""));
+            lint.Add(new Student(1, "Casper", "", "", new StudentInfo() ));
+            lint.Add(new Student(1, "Mikkel", "", "", new StudentInfo()));
+            lint.Add(new Student(1, "Peter", "", "", new StudentInfo()));
+            lint.Add(new Student(1, "Torben", "", "", new StudentInfo()));
+            lint.Add(new Student(1, "Christian", "", "", new StudentInfo()));
+            lint.Add(new Student(1, "Delle", "", "", new StudentInfo()));
+            lint.Add(new Student(1, "Bølle", "", "", new StudentInfo()));
 
             lint = sort.Randomizer(lint);
             Console.WriteLine(lint[0].ToString());

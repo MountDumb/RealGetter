@@ -25,7 +25,7 @@ namespace RealGetter.Lib
 
         public int StudentId
         {
-            get; set;
+            get { return _studentId; }
         }
 
         
@@ -38,15 +38,18 @@ namespace RealGetter.Lib
         #region Constructors
             public Student()
         {
+            
 
         }
-        public Student(int studentId, string firstName, string lastName, string gender, string ssn)
+        public Student(int studentId, string firstName, string lastName, string ssn, IStudentInfo studentInfo)
         {
-            this.StudentId = studentId;
+            _studentId = studentId;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.SSN = ssn;
-          
+            _currentStudentInfo = studentInfo;
+
+
         }
         #endregion
 

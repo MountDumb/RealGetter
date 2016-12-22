@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RealGetter.Lib.Interfaces;
 
 namespace RealGetter.Lib
 {
-    public class StudentInfo : RealGetter.Lib.Interfaces.IStudentInfo
+    public class StudentInfo : IStudentInfo
     {
         #region Fields
         private string _comment;
