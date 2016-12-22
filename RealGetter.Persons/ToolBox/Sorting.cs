@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RealGetter.Lib.Interfaces;
 
-namespace RealGetter.Lib
+namespace RealGetter.Lib.ToolBox
 {
     public class Sorting
     {
