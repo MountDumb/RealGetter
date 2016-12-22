@@ -8,9 +8,13 @@ namespace RealGetter.Lib.Interfaces
 {
     public interface IStudent
     {
-        int StudentId { get;  }
+        int StudentId { get; set; }
 
-        IStudentInfo CurrentStudentInfo { get; }
+        string ClassDesignation { get; set; }
+
+        IStudentInfo CurrentStudentInfo { get; set; }
+
+        void CreateStudent(int studentId, string firstName, string lastName, string ssn, string classDesignation);
 
 
     }

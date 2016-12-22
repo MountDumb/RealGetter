@@ -11,6 +11,7 @@ namespace RealGetter.Lib
     {
         #region Fields
         private int _studentId;
+
         private IStudentInfo _currentStudentInfo;
 
         
@@ -21,14 +22,21 @@ namespace RealGetter.Lib
         public IStudentInfo CurrentStudentInfo
         {
             get { return _currentStudentInfo; }
+            set { _currentStudentInfo = value; }
         }
 
         public int StudentId
         {
-            get { return _studentId; }
+            get { return _studentId;}
+            set { _studentId = value; }
         }
 
-        
+        public string ClassDesignation
+        {
+            get; set;
+        }
+
+
 
         public int GroupNumber { get; set; }
 
@@ -54,6 +62,15 @@ namespace RealGetter.Lib
         #endregion
 
         #region Methods
+
+        public void CreateStudent(int studentId, string firstName, string lastName, string ssn, string classDesignation)
+        {
+            _studentId = studentId;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.SSN = ssn;
+            this.ClassDesignation = classDesignation;
+        }
 
        
 

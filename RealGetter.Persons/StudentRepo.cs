@@ -9,10 +9,7 @@ namespace RealGetter.Lib
 {
     public class StudentRepo : IStudentRepo
     {
-        public string ClassDesignation
-        {
-            get; set;
-        }
+       
 
         private List<IStudent> students;
 
@@ -21,7 +18,7 @@ namespace RealGetter.Lib
             students = new List<IStudent>();
         }
 
-        public  List<IStudent> GetStudents()
+        public  IList<IStudent> GetStudents()
         {
             return students;
         }
