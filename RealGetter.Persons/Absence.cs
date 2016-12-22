@@ -23,6 +23,11 @@ namespace RealGetter.Lib
           
     }
 
+    public class Absence
+    {
+
+    }
+
 
    
     

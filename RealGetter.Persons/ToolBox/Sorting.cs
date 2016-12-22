@@ -55,34 +55,7 @@ namespace RealGetter.Lib
 
         }
 
-        //public void Randomizer<T>(IList<T> t) where T : IStudent, IPerson
-        //{
-        //    IList<T> input = new List<T>(t);
-        //    IList<T> output = new List<T>();
-        //    int currentIndex;
-
-        //    //int counter = input.Count;
-        //    //for (int i = counter; i > 0; i--)
-        //    //{
-        //    //    currentIndex = new Random().Next(counter);
-        //    //    output.Add(input[currentIndex]);
-        //    //    input.RemoveAt(currentIndex);
-        //    //    counter--;
-        //    //    t = output;
-        //    //}
-
-
-        //    while (input.Count > 0)
-        //    {
-        //        currentIndex = new Random().Next(input.Count);
-        //        output.Add(input[currentIndex]);
-        //        input.RemoveAt(currentIndex);
-        //    }
-
-        //    t = output;
-
-        //}
-
+        
         public IList<T> Randomizer<T>(IList<T> t) where T : IStudent, IPerson
         {
             IList<T> input = new List<T>(t);
