@@ -23,7 +23,7 @@ namespace RealGetter
         {
             Program p = new Program();
             p.Initialize();
-            p.ShowStudents();
+            p.Update();
             p.DoStuff();
 
 
@@ -72,6 +72,12 @@ namespace RealGetter
             students = new List<IStudent>(rep.GetStudents());
         }
 
+        void Update()
+        {
+            Console.Clear();
+            ShowStudents();
+        }
+
         void ShowStudents()
         {
             foreach (IStudent item in students)
@@ -85,6 +91,8 @@ namespace RealGetter
 
         void DoStuff()
         {
+            //rep.GetStudents()[1].CurrentStudentInfo.SetComment("Han er træt");
+            //Console.WriteLine(rep.GetStudents()[1].CurrentStudentInfo.Comment);
             students[1].CurrentStudentInfo.SetComment("Han er træt");
             Console.WriteLine(students[1].CurrentStudentInfo.Comment);
             Console.ReadLine();
