@@ -70,6 +70,7 @@ namespace RealGetter.Lib
             this.LastName = lastName;
             this.SSN = ssn;
             this.ClassDesignation = classDesignation;
+            _currentStudentInfo = new StudentInfo();
         }
 
        
