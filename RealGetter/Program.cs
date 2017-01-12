@@ -17,6 +17,8 @@ namespace RealGetter
     {
         IStudentRepo rep;
         IList<IStudent> students;
+        IStudent currentStudent;
+        Sorting sort;
 
 
         static void Main(string[] args)
@@ -24,29 +26,14 @@ namespace RealGetter
             Program p = new Program();
             p.Initialize();
             p.Update();
-            p.DoStuff();
+            p.Menu();
+            Console.WriteLine(p.currentStudent.ToString());
+            Console.ReadLine();
+            //p.DoStuff();
+            //p.Randomize();
+            
 
-
-            //Sorting sort = new Sorting();
-            //IList<Student> lint = new List<Student>();
-            //lint.Add(new Student(1, "Casper", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Mikkel", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Peter", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Torben", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Christian", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Delle", "", "", new StudentInfo()));
-            //lint.Add(new Student(1, "Bølle", "", "", new StudentInfo()));
-
-            //lint = sort.Randomizer(lint);
-            //Console.WriteLine(lint[0].ToString());
-            //Console.WriteLine(lint[1].ToString());
-            //Console.WriteLine(lint[2].ToString());
-            //Console.WriteLine(lint[3].ToString());
-            //Console.WriteLine(lint[4].ToString());
-            //Console.WriteLine(lint[5].ToString());
-            //Console.WriteLine(lint[6].ToString());
-            //Console.ReadLine();
-
+                       
             //sort.Grouper(lint, 2);
 
             //Console.WriteLine(lint[0].GroupNumber);
@@ -66,16 +53,95 @@ namespace RealGetter
 
         }
 
+       
+
         void Initialize()
         {
             rep = DBService.GetCurrentClassOfStudents(new StudentRepo());
             students = new List<IStudent>(rep.GetStudents());
+            sort = new Sorting();
+
+          
+            
+            
         }
 
+        void Menu()
+        {
+            Console.WriteLine("1: Select a Student");
+            string choice = Console.ReadLine();
+
+            switch (choice.ToLower())
+            {
+                case "1":
+                    Console.WriteLine("Choose Student Id");
+                    ChooseCurrentStudent();
+                    StudentMenu();
+                    break;
+                
+                default:
+                    Update();
+                    Menu();
+                    break;
+            }
+        }
+
+        void StudentMenu()
+        {
+            Update();
+            Console.WriteLine(currentStudent.ShowCurrentStudentinfo());
+            Console.WriteLine("1: Create Student Comment" + Environment.NewLine);
+            Console.WriteLine("x: Back" + Environment.NewLine);
+
+            string choice = Console.ReadLine();
+
+            switch (choice.ToLower())
+            {
+                case "1":
+                    Console.WriteLine("Comment: ");
+
+                    foreach (var item in students)
+                    {
+                        if (item == currentStudent)
+                        {
+                            item.CurrentStudentInfo.SetComment(Console.ReadLine());
+                        }
+                    }
+                    //currentStudent.CurrentStudentInfo.SetComment(Console.ReadLine());
+                    StudentMenu();
+                    break;
+
+                case "x":
+                    Menu();
+                    break;
+
+                default:
+                    StudentMenu();
+                    break;
+            }
+                
+        }
+
+        void ChooseCurrentStudent()
+        {
+            int choice = int.Parse(Console.ReadLine());
+
+            foreach (var item in students)
+            {
+                if (item.StudentId == choice)
+                {
+                    currentStudent = item;
+
+                }
+            }
+                
+                       
+        }
         void Update()
         {
             Console.Clear();
             ShowStudents();
+            
         }
 
         void ShowStudents()
@@ -83,10 +149,17 @@ namespace RealGetter
             foreach (IStudent item in students)
             {
                 Console.WriteLine(item.ToString());
-                Console.WriteLine(((IPerson)item).LastName);
+                
             }
 
             Console.ReadLine();
+        }
+
+        void Randomize()
+        {
+            students = sort.Randomizer(students);
+            Update();
+
         }
 
         void DoStuff()
@@ -94,7 +167,7 @@ namespace RealGetter
             //rep.GetStudents()[1].CurrentStudentInfo.SetComment("Han er træt");
             //Console.WriteLine(rep.GetStudents()[1].CurrentStudentInfo.Comment);
             students[1].CurrentStudentInfo.SetComment("Han er træt");
-            Console.WriteLine(students[1].CurrentStudentInfo.Comment);
+            Console.WriteLine(students[1].ShowCurrentStudentinfo());
             Console.ReadLine();
         }
 

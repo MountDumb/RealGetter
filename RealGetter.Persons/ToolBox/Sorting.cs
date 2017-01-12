@@ -13,7 +13,7 @@ namespace RealGetter.Lib.ToolBox
         {
 
         }
-        public void Grouper<T>(IList<T> t, uint groupSize) where T : IGroupNumber
+        public void Grouper<T>(IList<T> t, uint groupSize) where T : IStudent
         {
             if (groupSize < 1) throw new IndexOutOfRangeException("variable groupSize is less than 1. There must be at least one group");
             int currentGroupNumber = 1;
@@ -34,7 +34,7 @@ namespace RealGetter.Lib.ToolBox
             
         }
 
-        public void Grouper<T>(List<T> t, uint groupSize, uint startingGroupNumber) where T : IGroupNumber
+        public void Grouper<T>(List<T> t, uint groupSize, uint startingGroupNumber) where T : IStudent
         {
             if (groupSize < 1) throw new IndexOutOfRangeException("variable groupSize is less than 1. There must be at least one group");
             int currentGroupNumber = (int)startingGroupNumber;
@@ -56,7 +56,7 @@ namespace RealGetter.Lib.ToolBox
         }
 
         
-        public IList<T> Randomizer<T>(IList<T> t) where T : IStudent, IPerson
+        public IList<T> Randomizer<T>(IList<T> t) where T : IStudent
         {
             IList<T> input = new List<T>(t);
             IList<T> output = new List<T>();

@@ -10,11 +10,15 @@ namespace RealGetter.Lib.Interfaces
     {
         int StudentId { get; set; }
 
+        int GroupNumber { get; set; }
+
         string ClassDesignation { get; set; }
 
         IStudentInfo CurrentStudentInfo { get; set; }
 
         void CreateStudent(int studentId, string firstName, string lastName, string ssn, string classDesignation);
+
+        string ShowCurrentStudentinfo();
 
 
     }

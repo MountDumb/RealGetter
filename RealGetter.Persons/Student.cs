@@ -73,11 +73,19 @@ namespace RealGetter.Lib
             _currentStudentInfo = new StudentInfo();
         }
 
-       
+       public string ShowCurrentStudentinfo()
+        {
+            string output = StudentId + ": " + FirstName + " " + LastName + Environment.NewLine
+                            + "Current Level of Activity: " + _currentStudentInfo.ActivityLevel + Environment.NewLine
+                            + "CurrentTypeOfAbsence: " + _currentStudentInfo.Absence + Environment.NewLine
+                            + "Comment: " + _currentStudentInfo.Comment;
+            return output;
+        }
 
         public override string ToString()
         {
-            return this.FirstName;
+            string output = StudentId + ": " + FirstName + " " + LastName;
+            return output;
         }
 
         public override bool Equals(object obj)
