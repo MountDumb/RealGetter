@@ -68,7 +68,9 @@ namespace RealGetter
 
         void Menu()
         {
+            Console.WriteLine("Options:");
             Console.WriteLine("1: Select a Student");
+            Console.WriteLine("2: Create Student Groups");
             string choice = Console.ReadLine();
 
             switch (choice.ToLower())
@@ -89,8 +91,11 @@ namespace RealGetter
         void StudentMenu()
         {
             Update();
-            Console.WriteLine(currentStudent.ShowCurrentStudentinfo());
-            Console.WriteLine("1: Create Student Comment" + Environment.NewLine);
+            Console.WriteLine("Currently selected Student" + Environment.NewLine);
+            Console.WriteLine(currentStudent.ShowCurrentStudentinfo() + Environment.NewLine);
+
+            Console.WriteLine("Options:");
+            Console.WriteLine("1: Create Student Comment");
             Console.WriteLine("x: Back" + Environment.NewLine);
 
             string choice = Console.ReadLine();
@@ -108,6 +113,7 @@ namespace RealGetter
                         }
                     }
                     //currentStudent.CurrentStudentInfo.SetComment(Console.ReadLine());
+                    Update();
                     StudentMenu();
                     break;
 
@@ -140,6 +146,7 @@ namespace RealGetter
         void Update()
         {
             Console.Clear();
+            Console.WriteLine("Current Class of Students:" + Environment.NewLine);
             ShowStudents();
             
         }

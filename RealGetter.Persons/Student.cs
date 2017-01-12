@@ -75,7 +75,8 @@ namespace RealGetter.Lib
 
        public string ShowCurrentStudentinfo()
         {
-            string output = StudentId + ": " + FirstName + " " + LastName + Environment.NewLine
+            string output = "Name: " + FirstName + " " + LastName + Environment.NewLine
+                            + "Student Id: " + StudentId + Environment.NewLine
                             + "Current Level of Activity: " + _currentStudentInfo.ActivityLevel + Environment.NewLine
                             + "CurrentTypeOfAbsence: " + _currentStudentInfo.Absence + Environment.NewLine
                             + "Comment: " + _currentStudentInfo.Comment;
